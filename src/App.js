@@ -24,9 +24,15 @@ export default function App() {
       <h1>{advice}</h1>
       <button onClick={getAdvice}>Get advice</button>
       {/* whenever button is clicked, getAdvice is called */}
-      <p>
-        You have read <strong>(count)</strong>pieces of advice.
-      </p>
+      <Message count={count} />
     </div>
+  );
+}
+
+function Message(props){
+  return (
+  <p>
+    You have read <strong>(props.count)</strong>pieces of advice.
+  </p>
   );
 }
